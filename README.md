@@ -77,7 +77,6 @@ python --file cafe1.pkl --comp -5
 
 The subtitles will be regenerated. You can also use this to do reverse compensation by providing a positive number.
 
-Have fun subtitling!
 
 ## Unicode language support
 If you are making subtitle in a language that does use english characters be aware that some consoles are retarded in terms of
@@ -86,3 +85,6 @@ simply use the custom cue with a language
 that console can properly display. In my case
 I always use custom cue in english no matter
 what language the subtitle is in.
+
+
+**Have fun subtitling!**
