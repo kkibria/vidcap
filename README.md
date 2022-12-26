@@ -2,6 +2,15 @@
 
 Generates closed caption for a video.
 
+## Setup python
+Standard stuff! Create a python virtual environment and activate.
+Use ``requirement.txt`` to install missing libraries,
+```
+pip install -r requirement.txt
+```
+
+
+
 ## Getting started
 A very simple python script records the timestamp for each caption by simply tapping
 the ``enter`` key.
