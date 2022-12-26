@@ -48,23 +48,23 @@ Now the script will show the cue, is armed and waiting for your tap.
 At this point you start playing the your video with your video player.
 
 ### Step 5
-Go back to the python console and wait till when video comes to the
+Go back to the python console and wait till the video comes to the
 point when first caption will show.
 
 Tap the ``enter key``. Then next cue will show. Wait till the video comes
 to that point. Tap the ``enter key`` again. Keep repeating this process till
-the timestamp for all the cues are recorded.
+the timestamps for all the cues are recorded.
 
 ### Step 6
 At this point, the script will generate subtitles in two formats,
-* ``.lrc`` format
-* ``.srt`` format
+* ``.lrc`` format.
+* ``.srt`` format.
 
 Now you can use them with wherever you need them like for **youTube** or something.
 
 ## Custom cue
-Sometimes to provide custom hints like video imagery as a cue instead of showing the part
-of the subtitle. In which case you can put the hint as shown below in the file.
+Sometimes it is useful to provide custom hints like reference video imagery as a cue instead of actually showing part
+of the subtitle. In which case, you can put the hint with a ``|`` as separator in the file as shown below.
 
 Example ``cafe2.txt``,
 ```
