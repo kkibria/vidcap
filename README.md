@@ -64,14 +64,14 @@ Now you can use them with wherever you need them like for **youTube** or somethi
 
 ## Custom cue
 Sometimes it is useful to provide custom hints like a reference to the video imagery as a cue instead of actually showing part
-of the subtitle. In which case, you can put the hint with a ``|`` as separator in the file as shown below.
+of the subtitle. In which case, you can put the hint with a ``|`` as separator in the file where needed as shown below.
 
 Example ``cafe2.txt``,
 ```
 00:14  01:45
 balcony|pondering on the balcony in a lazy afternoon
 tea|a cup of tea would be perfect now
-walking|walking along the path by the river
+walking along the path by the river
 cafe|heading towards the local cafe
 ```
 
