@@ -63,7 +63,7 @@ At this point, the script will generate subtitles in two formats,
 Now you can use them with wherever you need them like for **youTube** or something.
 
 ## Custom cue
-Sometimes it is useful to provide custom hints like a reference to video imagery as a cue instead of actually showing part
+Sometimes it is useful to provide custom hints like a reference to the video imagery as a cue instead of actually showing part
 of the subtitle. In which case, you can put the hint with a ``|`` as separator in the file as shown below.
 
 Example ``cafe2.txt``,
