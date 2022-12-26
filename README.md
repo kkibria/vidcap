@@ -20,7 +20,8 @@ create a input text file with ``.txt`` extension.
 The first line should contain:
 * Time (mm:ss) when first caption will show. 
 * Length of the video (mm:ss).
-Following lines will have one caption per line 
+
+Following lines will have one caption per line.
 
 Example ``cafe1.txt``,
 ```
