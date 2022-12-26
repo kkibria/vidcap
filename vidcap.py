@@ -20,8 +20,12 @@ def capture(fn):
     end_time = None
     tsorigin = None
 
-    with open(fn) as f:
+    with open(fn, encoding="utf-8-sig") as f:
         lines = f.readlines()
+
+    # for line in lines:
+    #     print(line.strip())
+    # exit()
 
     newcontent = []
     for line in lines:
@@ -38,7 +42,7 @@ def capture(fn):
             parts.append(parts[0])
             parts[0] = parts[0][0:15] 
 
-        print(parts[0], parts[1])
+        print(parts[0])
         input(">")
         ts = time.time()
         if not tsorigin:
@@ -69,21 +73,23 @@ def tsformat(sec):
     return '00:{:02d}:{}'.format(m, fs)
 
 def render(comp, newcontent, lrcfn, srtfn):
-    with open(lrcfn, "w") as f:
+    with open(lrcfn, "w", encoding="utf-8") as f:
         for i in range(len(newcontent)-1):
             t = newcontent[i][0]+comp
             m = int(t/60)
             s = t%60
             print('[{:02d}:{:05.2f}]{}'.format(m, s, newcontent[i][1]), file=f)
 
-    with open(srtfn, "w") as f:
+    with open(srtfn, "w", encoding="utf-8") as f:
         for i in range(len(newcontent)-1):
             bgn = tsformat(newcontent[i][0]+comp)
             end = tsformat(newcontent[i+1][0]+comp)
 
             print(i+1, file=f)
             print('{} --> {}'.format(bgn, end), file=f)
-            print(newcontent[i][1] + '\n', file=f)
+            print(newcontent[i][1], file=f)
+            print(file=f)
+
 
 def run(opt):
     d, f, e = fn_spilt(opt.file)
