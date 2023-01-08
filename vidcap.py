@@ -30,7 +30,7 @@ def capture(fn):
     newcontent = []
     for line in lines:
         if not line.strip():
-            continue  
+            continue
         if not start_time:
             x = line.split()
             start_time = parse_time(x[0])
@@ -40,7 +40,7 @@ def capture(fn):
         parts = line.split('|')
         if len(parts) < 2:
             parts.append(parts[0])
-            parts[0] = parts[0][0:15] 
+            parts[0] = parts[0][:15] 
 
         print(parts[0])
         input(">")
@@ -86,7 +86,7 @@ def render(comp, newcontent, lrcfn, srtfn):
             end = tsformat(newcontent[i+1][0]+comp)
 
             print(i+1, file=f)
-            print('{} --> {}'.format(bgn, end), file=f)
+            print(f'{bgn} --> {end}', file=f)
             print(newcontent[i][1], file=f)
             print(file=f)
 
@@ -96,7 +96,7 @@ def run(opt):
     nc = None
     if e == '.txt':
         nc = capture(opt.file)
-        save_pickle(os.path.join(d, f + '.pkl'), nc)
+        save_pickle(os.path.join(d, f'{f}.pkl'), nc)
 
     elif e == '.pkl':
         nc = load_pickle(opt.file)
@@ -110,8 +110,8 @@ def run(opt):
 
     # print(nc)
 
-    lrcfn = os.path.join(d, f + '.lrc')
-    srtfn = os.path.join(d, f + '.srt')
+    lrcfn = os.path.join(d, f'{f}.lrc')
+    srtfn = os.path.join(d, f'{f}.srt')
 
     render(int(opt.comp), nc, lrcfn, srtfn)
 
